@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+    <style>
+        body
+        {
+            margin: 0px;
+            background-color:whitesmoke;
+        }
+        .car
+        {
+            background-color: rgb(218, 218, 228);
+            height: 80px;
+        }
+        .aside
+        {
+
+            padding: 40px;
+            width: 700px;
+            height: 50px;
+            margin-top: -20px;
+            background-color: white;
+            margin-left: 20px;
+        }
+        .btn
+        {
+            margin-left: 500px;
+            width: 100px;
+            height: 40px;
+            margin-top: -20px;
+        }
+        .li
+        {
+            padding: 8px;
+            height: 8px;
+            background-color: rgb(37, 255, 8);
+            width: 5px;
+            margin-top: -40px;
+            text-decoration: none;
+            text-align: center;
+            list-style: none;
+            border: thick;
+            
+        }
+        h4
+        {
+            margin-left: 20px;
+            margin-top: -35px;
+            font-size: medium;
+        }
+        .de
+        {
+            background-color:rgb(21, 21, 236);
+            color: white;
+            margin-left:10px;
+            margin-top: 20px;
+            width: 700px;
+            padding: 10px;
+        }
+        h3
+        {
+            font-style: normal;
+            font-size: small;
+        }
+        .add
+        {
+            margin-left: 15px;
+            background-color: light rgb(117, 161, 161);
+            width: 700px;
+            height: 150px;
+        }
+        img,p
+        {
+            margin-top: 0px;
+            margin-left: 400px;
+        }
+        .pp
+        {
+            font-size:small;
+        }
+        .btnm
+        {
+            background-color: rgb(255, 143, 15);
+        }
+        .ml
+        {
+            margin-left: -450px;
+            margin-top: 30px;
+            margin-left: 15px;
+            background-color: rgba(255, 255, 255, 0.99);
+            width: 700px;
+            height: 150px;
+        }
+        .add>button
+        {
+            width: 200px;
+            height: 50px;
+            margin-top: 1px;
+            margin-left: 5px;
+        }
+        .addd
+        {
+            margin-left: 0px;
+            background-color:rgb(255, 255, 255);
+            width: 700pxpx;
+            height: 80px;
+        }
+        .na
+        {
+            margin-left: 0px;
+            background-color:rgb(255, 255, 255);
+            width: 700pxpx;
+            height: 40px;
+        }
+        .na>h3
+        {
+            margin-left: 40px;
+            margin-top:10px;
+            font-size: medium;
+        }
+        .lo
+        {
+            color:rgb(149, 149, 177);
+        }
+        .h1
+        {
+        
+            margin-left: 900px;
+            background-color: black;
+        }
+        .aa
+        {
+            text-decoration: none;
+            font-size: medium;
+        }
+        table
+        {
+            font-size: medium;
+            background-color: white;
+            border-style: none;
+            color: rgb(54, 40, 40);
+        }
+        .img
+        {
+            margin-left: 0px;
+            width: 200px;
+            height: 200px;
+        }
+        .imgg
+        {
+            width: 150px;
+            height: 100px;
+            margin-top: -10px;
+        }
+        .foo
+        {
+            margin-top: 500px;
+        }
+        .back
+        {
+            margin-left: 10px;
+            margin-top: 10px;
+
+        }
+        th
+        {
+            font-size:large;
+            width: 20px;
+            border-radius: 100%;
+
+        }
+        #btn
+        {
+            width: 60px;
+            height: 30px;
+            border-radius: 100%;
+            background-color:rgb(39, 255, 255) ;
+        }
+        .p
+        {
+            margin-top: -120px;
+            margin-left:-250px;
+            font-weight: bolder;
+            color: rgb(235, 32, 250);
+        }
+       .i
+       {
+        margin-left: 150px;
+        background-color: white;
+        border: 3px solid rgb(250, 247, 247);
+       }
+       #line_through
+       {
+        text-decoration: line-through;
+        color: rgb(255, 34, 34);
+       }
+       #off
+       {
+        color: rgb(4, 0, 18);
+       }
+       button
+       {
+       
+           color: rgb(255, 7, 7);
+           margin-left: 8%;
+           margin-bottom: 2%;
+           transition: all 1s linear 0s ;
+           background-color: rgba(242, 25, 242, 0);
+           box-shadow: 10px 10px 5px rgb(98, 108, 111);
+           border-top-right-radius: 50%;
+           border-bottom-left-radius: 50%;
+           margin-top: 20px;
+       }
+       button:hover
+       {
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        box-shadow: rgba(208, 11, 11, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+        <div class="col-sm-12">
+    <div class="car">
+        <nav class="nav">
+            <button class="btn-black"><a href="{% url 'payment' %}" class="nav-link">PAYMENT</a></button>
+                <button><a href="{% url 'app1:three' %}" class="nav-link">Home Page</a></button>
+          
+                </nav>
+         <!-- <img src="https://th.bing.com/th/id/R.7af51d493c25d2361a7a7daf5dad209d?rik=5SLngYXjvegzIg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Ab3cD6Z8T10%2fU8ElPxQ0niI%2fAAAAAAAABPk%2f5hn9haUz4p0%2fs1600%2fflipkart_logo.png&ehk=O9kMtq71sXAGBjJWcYAvkoLYluJ2hIngmibIuS4gngc%3d&risl=&pid=ImgRaw&r=0" class="imgg"> -->
+        
+    </div>
+    <br>
+    </header>
+    <br>
+    <br>
+    <aside>
+        <div class="aside">
+            <button class="btn">Change</button>
+         <li class="li"></li>
+            <h4>Login</h4>
+            <li>+19 9959637036</li>
+        <div class="h1">
+        <div class="aa">PRICEDETAILS</div>
+        <div>
+            <table cellpadding="20px" cellspacing="70px">
+                <thead>
+                    <tr>
+                        <th>Price</th>
+                        <th>Rs.9321/-</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>Charges</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Payment</td>
+                        <td>Rs.356292</td>
+                    </tr>
+            </table>
+            <div>
+                <img src="https://www.punekarnews.in/wp-content/uploads/2019/06/super-coin-logo--1024x893.png" width="50px" height="50px" class="img">
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="de">
+            <h3><button>2</button>DELIVERY ADDRESS</h3>
+        </div>
+        <br>
+        <div class="add"> 
+            <input type="checkbox" name="one" id="">  Golla Vishnu Yadav 8539323212
+            <br>
+            <br>
+            <h3>Krishnadoddi(vi),C belagal (mdl),Kurnool(dist),Andra pradesh Pincode 518462</h3>
+            <br>
+            <br>
+            <div class="de">
+                <h3><button>3</button>ORDER SUMMARY</h3>
+                </div>
+                <div class="back">
+                    <img src="https://rukminim1.flixcart.com/image/100/100/kolsscw0/trimmer/p/s/p/0-5-12-mm-stainless-steel-nht-1073-00-usb-cordless-nova-original-imag3ysyn3unmpsz.jpeg?q=90 " class="back">
+                    <br>
+                    <tr>
+                        <th>+</th>
+                        <button id="btn" style="color:rgb(250, 16, 16);">1</button>
+                        <th>-</th>
+                    </tr>
+                    <div class="p">
+                        <p>NOVA IND BS-306 TRIMMER 80 MIN RUNTIME 4 LENGTH S...</p>
+                    </div>
+                    <div class="i">
+                        <span>Delivery in 7-8days|Free</span>
+                        <br>
+                        <small>Multicolor</small>
+                        <br>
+                        <h3 style="color:rgb(0, 21, 255);">Seller:Indian Urban</h3>
+                        <br>
+                        <h4 id="line_through">Rs.1.495</h4>
+                        <span id="off">40% off 2offers applied</span>
+                        <br>
+                        <span id="">Rs.599</span>
+                    </div>
+                </div>
+                
+                </div> 
+            </div>
+        </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            </body>
+        </html>

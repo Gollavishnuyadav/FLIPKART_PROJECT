@@ -1,0 +1,86 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Login Page</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+></script>
+<style>
+.card
+{
+    width:300px;
+    height: 300px;
+    margin-top:150px;
+    background: rgb(243, 242, 255);
+    background: linear-gradient(90deg, rgba(30,27,70,0.7008053221288515) 0%, rgba(44,9,121,0.2666316526610645) 35%, rgba(0,212,255,1) 100%);
+    margin-left: 230px;
+}
+
+.input,input
+{
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(223, 209, 209);
+    margin-top: 10px;
+    margin-left: 10px;
+
+    
+}
+body
+{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:150px;
+    width: 800px;
+    height: 900px;
+    background-image: url("https://images.milled.com/2019-07-19/XJEIfio-phuvaDSF/CznJe4vx4bH1.gif");
+}
+a
+{
+  color: black;
+}
+
+</style>
+<form method="POST">
+    {% csrf_token %}
+    <div class="card">
+    <!-- <label for="un">UserName:</label> -->
+    <input type="text" name="un" id="un" placeholder="Username" class="input"><br><br>
+
+    <!-- <label for="pw">PassWord</label> -->
+    <input type="password" name="pw" id="pw" class="bg-" placeholder="Password" class="input"><br>
+    <br>
+    <div class="card-footer">
+    <input type="submit" value="LOGIN" class="btn btn-primary" >
+    <br>
+    <a href="{% url 'reset_password' %}">RESET PASSWORD</a>
+    </div>
+</div>
+</form>
+
+{% endblock %}

@@ -159,33 +159,41 @@ rel="stylesheet"
 			background-color: black;
 
 		}
+		.a
+		{
+			background-color: black;
+			color: white	;
+		}
+		select>option
+		{
+			background-color: black;
+			color: white;
+		}
 	</style>
 </head>
 <body>
 	<header>
 		<div class="card">
 			<div>
-				<a href="https://www.nasa.gov/">NASA</a>
+				<a href="https://www.flipkart.com/">SEARCH</a>
 			</div>
 			<div>
-				<input type="text" name="" placeholder="search for planets,meterios and moon">
+			<input type="text" name="" placeholder="Search">
 			</div>
 			<div>
-				<a href="{% url 'app2:four' %}"><button class="btn btn-secondary">EXIT</button></a>
+				<a href="{% url 'home' %}"><button class="btn btn-secondary">HOME</button></a>
 			</div>
-			<div>
-				<a href="https://en.wikipedia.org/wiki/Moon"><i class="fa-solid fa-indian-rupee-sign"></i>PAYMENT</a>
-			</div>
-			<div>
-				<a href="https://en.wikipedia.org/wiki/Moon"><i class="fa-solid fa-indian-rupee-sign"></i>PAYMENT</a>
-			</div>
-			<div>
-				<a href="https://en.wikipedia.org/wiki/Moon"><i class="fa-solid fa-indian-rupee-sign"></i>PAYMENT</a>
-			</div>
-			<div class="a">
-				<a href="https://en.wikipedia.org/wiki/Solar_System">MORE</a>
-				<select>
-                    <option>For more information</option>
+			<!-- <div>
+				<a href="{% url 'payment' %}"><i class="fa-solid fa-indian-rupee-sign"></i>PAYMENT</a>
+			</div> -->
+			<!-- <div>
+				<a href="{% url 'eight' %}">x	DELIVERY</a>
+			</div> -->
+			
+			<div class="a" style="color: blue;">
+				<a href="">MORE</a>
+				<select style="color: #45637d;">
+                    <option style="color: aqua;">More Information</option>
 					<option><a href=""><i class="fa-solid fa-bell"></i>Notification Preference</option></a>
 					<option>24*7 Customer Support</option>
 					<option>Advrtise</option>

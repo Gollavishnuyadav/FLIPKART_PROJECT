@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "app",
     "app1",
     "app2",
 ]
@@ -128,3 +129,17 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS=[STATIC_DIR_PROJECT10,STATIC_DIR_APP1,STATIC_DIR_APP2]
+
+
+MEDIA_URL='media/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+    
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='gollavishnuyadav2@gmail.com'
+EMAIL_HOST_PASSWORD='xdkmeqvwrmiqjzok'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
+
+

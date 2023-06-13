@@ -10,22 +10,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<style>
-		*
-	    {
-			margin: 0px;
-			@include media-breakpoint-only(xs) {0}
-			 @include media-breakpoint-only(sm) { 100 }
-			@include media-breakpoint-only(md) {300 }
-			@include media-breakpoint-only(lg) { 500}
-			@include media-breakpoint-only(xl) { 600 } 
-			@include media-breakpoint-only(xxl) { 900 }
-		}
 		.containe
 		{
 			
 			justify-content: space-between;
 /*			flex-direction: row;*/
-			background-color:ghostwhite;
+			background-color:rgb(0, 0, 226);
 			border: 1px solid black;
 			display: flex;
 			flex-flow: row wrap;
@@ -34,6 +24,12 @@
 
 
 		}
+		nav>a
+		{
+			color: rgb(0, 0, 0);
+
+		}
+
 		.card1
 		{
 			justify-content: space-between;
@@ -72,11 +68,6 @@
 			font-variant-numeric: revert;
 			background-image: url("https://img.freepik.com/free-vector/abstract-banner_1182-689.jpg?w=740&t=st=1679462656~exp=1679463256~hmac=3e23e646ed02a1455c8e3218f8226d67d297bf369d27285d214a8d5db15f5a98");
 		}
-		h1
-		{
-			fo
-		}
-	
 		section
 		{
 			margin-left: 300px;
@@ -153,29 +144,48 @@
          .aa:hover
         {
         	transform: scale(1.1);
-        	padding: ;
+        
         }
         input
         {
         	margin-left: px;
         }
+		.fli
+		{
+			height: 50px;
+			width: 100px;
+		}
+		.nav>a
+		{
+			color: rgb(255, 244, 244);
+			font-size: medium;
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body><header>
+	
 		<div class="containe">
-			<div><a href=""><i class="fa-solid fa-bars"></i></a></div>
-			<div>
-				<i class="fa-brands fa-vimeo">-mart</i>
+			<div><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" class="fli">
+				Explore Plus
+				<img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png">
 			</div>
-			<div>Vehicles</div>
-			<div>Books</div>
-			<div>Fashion</div>
-			<div>Travel</div>
-			<div><button class="btn btn-secondary">Exit</button></div>
-			<div>
-				<button class="btn btn-primary">LOGIN</button>
-			</div>
-			<div><button class="btn btn-primary">REGESTER</button></div>
+			<nav class="nav";>
+				<a href="{% url 'admin:index' %}" class="nav-link">ADMIN</a>
+				<a href="{% url 'registration' %}" class="nav-link">REGISTER</a>
+				<a href="{% url 'app1:three' %}" class="nav-link">HOME PAGE</a>
+		  
+			 
+				{% if user.is_authenticated %}
+			  
+				<a href="{% url 'change_password' %}" class="nav-link">CHANGE PASSWORD</a>
+				<a href="{% url 'user_logout' %}" class="nav-link">LOGOUT</a>
+			  
+			  {% else %} 
+			  <a href="{% url 'user_login' %}" class="nav-link">LOGIN</a>
+			  {% endif %}
+			
+			</nav>
 		</div>
 
 	</header>
@@ -265,7 +275,7 @@
 
 	<section>
 		<div class="h6">
-			<center><i class="fa-sharp fa-solid fa-magnifying-glass"></i><input type=" " name="" placeholder="Search">
+			<center><input type=" " name="" placeholder="Search">
 			<div class="container-fluid d-flex d-space-between">
 			<li><i class="fa-solid fa-folder-open"></i></li>
 			<li><i class="fa-sharp fa-solid fa-plane"></i></li>
@@ -645,6 +655,6 @@
 			<p>Redmi</p>
 		</div>
 	</div>
-	
+
 </body>
 </html>

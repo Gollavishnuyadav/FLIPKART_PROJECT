@@ -5,7 +5,7 @@ def one(request):
     return render(request,"one.html")
 
 def three(request):
-    return render(request,"three.html")
+    return render(request,"home.html")
 
 def five(request):
     return render(request,"five.html")

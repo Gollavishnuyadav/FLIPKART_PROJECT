@@ -39,27 +39,6 @@
             border-bottom-left-radius: 50px;
             
         }
-        .card1
-		{
-			justify-content: space-between;
-			align-items: center;
-			display: flex;
-			flex-direction: row;
-			text-decoration: none;
-			text-decoration: !important;
-			background-color:darkgrey;
-   			height: 50px;
-            color: white;
-            font-weight: bold;
-            flood-color: rgb(255, 255, 255);
-            border-radius: 0%;
-            transition: all 0s linear 1s;
-            font-family:monospace;
-            padding: 100px;
-            margin: 0px;
-            margin: ;
-           
-		}
 		a
 		{
 			margin-left: 20px;
@@ -72,6 +51,7 @@
         .a
         {
             border-radius: 100px;
+			
 
         }
         aside
@@ -163,78 +143,138 @@
 				display: inline-block;
 				height: 11px;
 			}
-        } 
+        }
+		p
+		{
+			font-size: 10px;
+			font-style: italic;
+			font-weight:thick;	
+		}
+		.card1
+		{
+			justify-content: space-between;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			background-color:white;
+   			height: 120px;
+            color: white;
+            font-weight: bold;
+            flood-color: rgb(255, 255, 255);
+            border-radius: 0%;
+            transition: all 0s linear 1s;
+            font-family:monospace;
+            text-decoration: none;
+           }
+		   .one>img
+			{
+				text-decoration: none;
+				width: 50px;
+				border: none;
+			}
+			.select>select
+			{
+				background-color: rgb(5, 8, 8);
+				color: rgb(255, 254, 250);
+				font-size: medium;
+				font-weight: bold;
+				font-family: Arial, Helvetica, sans-serif;
+			}
 	</style>
 </head>
 <body>
 	<header>
 		<div class="card">
 			<div>
-				<a href="https://www.nasa.gov/">Flipkart</a>
+				<a href="https://www.flipkart.com/">Flipkart</a>
 			</div>
 			<div>
 				<button class="btn btn-primary"><input type="text" name="" placeholder="search"></button>
 			</div>
 			<div>
-				<a href="{% url 'app1:one' %}"><button class="btn btn-secondary">EXIT</button></a>
+				<a href="{% url 'home' %}"><button class="btn btn-secondary">HOME</button></a>
+				<!-- <a href="{% url 'home' %}" class="nav-link">HOME</a> -->
 			</div>
 			<div>
-				<a href="https://en.wikipedia.org/wiki/Moon"><i class="fa-solid fa-indian-rupee-sign"></i>PAYMENT</a>
+				<a href="{% url 'payment' %}"><i class="fa-solid fa-indian-rupee-sign"></i></a>
 			</div>
 			<div class="a">
-				 <a href="https://en.wikipedia.org/wiki/Solar_System">MORE</a>
-				<button class="btn btn-secondary"><select>
+				 <a href="https://en.wikipedia.org/wiki/Solar_System"></a>
+				<button class="btn btn-secondary">
+					<div class="select">
+					<select>
                     <option>For more information</option></button>
 					<option><a href=""><i class="fa-solid fa-bell"></i>Notification Preference</option></a>
 					<option>24*7 Customer Support</option>
 					<option>Advrtise</option>
                     <option>Download</option>
-				</select></button>
+				</select>
+			</div></button>
 			</div>
 			<div>
 			
 			</div>
 		</div>
-			<div class="card1">
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100">
-					<br>
-					<a href="">GROCERY&FOOD</a>
-				</div>
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100">
-					<br>
-					<a href="">MOBILES</a>
-				</div>
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d34810848b2895c9.png?q=100">
-					<br>
-					<a href="">FASHION</a>
-				</div>
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100">
-					<br>
-					<a href="">TRAVEL</a>
-				</div>
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
-					<br>
-					<a href="">OFFERS</a>
-				</div>
-				<div class="one">
-					<img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
-					<br>
-					<a href="">TWO-WHEELERS</a>
-				</div>
+		<div class="card1">
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100">
+				<br>
+				<a href="">GROCERY&FOOD</a>
 			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100">
+				<br>
+				<a href="">MOBILES</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100">
+				<br>
+				<a href="">ELECTRONICS</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d34810848b2895c9.png?q=100">
+				<br>
+				<a href="">FASHION</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100">
+				<br>
+				<a href="">TRAVELS</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100">
+				<br>
+				<a href="">APPLIANCE</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100">
+				<br>
+				<a href="">HOME</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
+				<br>
+				<a href="">TOY</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+				<br>
+				<a href="">OFFERS</a>
+			</div>
+			<div class="one">
+				<img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100">
+				<br>
+				<a href="">TWO-WHEELERS</a>
+			</div>
+		</div>
 					<div class="div2">
 						<p>A good quality electric men’s shaver makes the shaving experience a pleasant one. Whether it’s trimming facial hair, getting rid of the nose hair, or getting an immaculate clean shave, an electric shaver helps you to do all tasks seamlessly. What’s more? The electric shavers are ideal for those with sensitive skin, and you don’t have to bother about painful razor cuts. Regardless of your tight schedule, an electric shaver and trimmer is the one-stop solution for all your shaving needs. There are different types of electric shavers, such as electric foil shavers, rotatory electric shavers, corded, and cordless shavers. The price of the men’s shavers online can vary depending upon the product variant, brand, and additional features. Brands like Syska, Panasonic, PHILIPS, HAVELLS, Richards n Steven, etc., manufacture top-notch quality electric shavers. Panasonic ES-LV9Q is an excellent choice for both men and women with sensitive skin. Electric men’s shavers come with a set of instructions and the precautions you need to take while shaving. Depending on your shaving requirements, choose from the variety of shavers available online after checking reviews and ratings, and get them delivered to your doorstep easily.</p>
 						<div class="card3">
-							<li>Sortby</li>
-							<li>Popularity</li>
-							<li>Price</li>
-							<li>Newest First</li>
-							<li>More</li>
+							<li>SORTBY</li>
+							<li>POPULARITY</li>
+							<li>PRICE</li>
+							<li>NEW</li>
+							<li>MORE</li>
 						</div>
 						<br>
 						<br>
@@ -264,7 +304,7 @@
 					</div> 
 					<br>
 					<div>
-						<img src="https://rukminim1.flixcart.com/image/312/312/l48s9zk0/trimmer/l/d/k/0-5-15-mm-mg3750-33-multi-groomer-set-stainless-steel-cordless-original-imagf6q8j4pdkpju.jpeg?q=70" width="200px">
+						<img src="https://rukminim1.flixcart.com/image/612/612/xif0q/trimmer/p/r/d/0-5-3-mm-pocket-electric-trimmer-for-men-and-women-stainless-original-imagq4zdzga3rpzx.jpeg?q=70" width="200px">
 						<br>
 							<p>
 							RACCOON Professional Beard Trimmer For Men
@@ -273,9 +313,11 @@
 							<p>Phillips</p>
 						<br>
 						<img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" width="100px">
-					</div> <br>
+					</div>
+					<br>
 					<div>
-						<img src="https://rukminim1.flixcart.com/image/312/312/kvsfhjk0/trimmer/v/b/3/0-5-20-mm-mg-3721-stainless-steel-cordless-philips-original-imag8hxkgvzhym5j.jpeg?q=70" width="200px">
+						<br>
+						<img src="https://rukminim1.flixcart.com/image/612/612/xif0q/trimmer/u/v/w/0-5-12-mm-at-538-h-t-c-professional-beard-trimmer-stainless-original-imaghr4egr5cje7c.jpeg?q=70" width="200px" height="300px">
 						<br>
 							<p>
 							RACCOON Professional Beard Trimmer For Men

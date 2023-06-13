@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e681d559bc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body
+        {
+
+            background-repeat: no-repeat;
+            background-image: url("https://www.analyticsinsight.net/wp-content/uploads/2022/10/Comp-2_1.gif");
+            background-size: cover;
+
+        }
+        label
+        {
+            font-size: x-large;
+            font-weight:bold;
+            margin-bottom: 20px;
+            color: #ffffff;
+
+        }
+        input
+        {
+            margin-top: 50px;
+            border-radius: 1%;
+            border-color:cyan;
+            background-color: rgb(0, 0, 0);
+            color: rgb(251, 251, 251);
+
+        }
+        textarea
+        {
+            border-radius: 100%;
+            text-align: center;
+        }
+            button
+            {
+            
+                color: rgb(211, 8, 8);
+                margin-left: 15%;
+                margin-bottom: 2%;
+                transition: all 1s linear 0s ;
+                background-color: #e70bad;
+                box-shadow: 10px 10px 5px lightblue;
+            }
+            button:hover
+            {
+                border-top-right-radius: 50%;
+                border-bottom-left-radius: 50%
+                background-color: #e70bad;
+            }
+            h1
+            {
+                font-size: larger;
+                color: rgb(1, 202, 78);
+                font-weight: bold;
+                margin-top: 100px;
+        
+            }
+            div
+            {
+                box-shadow: 0 0 10px black;
+                width: 500px;
+                margin: 100px auto;
+                height: 271px;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+            }
+            div:hover
+            {
+                cursor: pointer;
+            }
+            div>img
+            {
+                width: inherit;
+                height: inherit;
+                border: 1 px solid black;
+                border-radius: inherit;
+                filter: grayscale(100%);
+                transition: all 1s linear 0s;
+            }
+            div:hover>img
+            {
+                filter:grayscale(0%);
+                transform: translateY(-100px);
+            }
+            div>.img_info
+            {
+                position: absolute;
+                top: -100px;
+                left: 0px;
+                background-color: rgb(0, 0, 0);
+                padding: 0px;
+                transform: translateX(100%);
+                transition: all 3s linear 1s;
+            }
+            div:hover>.img_info
+            {
+                transform: translateX(0px);
+            }	
+            i
+            {
+                width: 100px;
+                height: 100px;
+                color: azure;
+            }
+           
+            .one
+            {
+                font-size: 100px;
+
+            }
+            h3
+            {
+                color: rgb(166, 173, 235);
+                font-size: medium;
+                font-family: normal;
+            }
+            h1
+            {
+                font-weight:bolder;
+                font-size: larger;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            }
+            textarea
+            {
+                background-color: black;
+            }
+            </style>
+    </style>
+    {% extends 'dummy.html' %}
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <!-- <div>
+            <img src="https://thumbs.dreamstime.com/b/6registration-gold-text-black-background-d-rendered-royalty-free-stock-picture-image-can-be-used-online-website-87922157.jpg">
+            <div class="img_info">
+                <h3>PLEASE REGISTER THERE</h3>
+                <i class="fa-solid fa-download"></i>
+            </div>
+        </div> -->
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>REGISTER HERE</h1>
+        {{UFD.as_p}}
+        {{PFD.as_p}}
+        <input type="submit" value="Click">
+    </form>
+    {% endblock %}
+</body>
+</html>
+
